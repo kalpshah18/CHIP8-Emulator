@@ -83,3 +83,7 @@ Run the [chip8-test-rom](roms/chip8-test-rom) `test_opcode.ch8` ROM to check opc
 ```powershell
 .\build\Release\chip8.exe roms\chip8-test-rom\test_opcode.ch8
 ```
+
+## License
+
+Released under the [MIT License](LICENSE).
