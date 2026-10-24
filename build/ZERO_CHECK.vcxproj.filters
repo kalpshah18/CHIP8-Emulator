@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\shahk\OneDrive\Documents\ProgrammingProjects\CHIP8-Emulator\build\CMakeFiles\adfd0b5d2ee7a07be4a364721aed9e2b\generate.stamp.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="CMake Rules">
+      <UniqueIdentifier>{396F2BD4-92CE-36C8-93D3-11FEB41A4E4D}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

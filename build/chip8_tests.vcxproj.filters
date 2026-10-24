@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="C:\Users\shahk\OneDrive\Documents\ProgrammingProjects\CHIP8-Emulator\tests\tests.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\shahk\OneDrive\Documents\ProgrammingProjects\CHIP8-Emulator\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{F5DF0958-A473-3D4B-AB99-472F331E8F64}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

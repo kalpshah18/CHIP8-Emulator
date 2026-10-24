@@ -1,0 +1,6 @@
+C:/Users/shahk/OneDrive/Documents/ProgrammingProjects/CHIP8-Emulator/build/CMakeFiles/chip8core.dir
+C:/Users/shahk/OneDrive/Documents/ProgrammingProjects/CHIP8-Emulator/build/CMakeFiles/chip8.dir
+C:/Users/shahk/OneDrive/Documents/ProgrammingProjects/CHIP8-Emulator/build/CMakeFiles/chip8_tests.dir
+C:/Users/shahk/OneDrive/Documents/ProgrammingProjects/CHIP8-Emulator/build/CMakeFiles/RUN_TESTS.dir
+C:/Users/shahk/OneDrive/Documents/ProgrammingProjects/CHIP8-Emulator/build/CMakeFiles/ALL_BUILD.dir
+C:/Users/shahk/OneDrive/Documents/ProgrammingProjects/CHIP8-Emulator/build/CMakeFiles/ZERO_CHECK.dir
