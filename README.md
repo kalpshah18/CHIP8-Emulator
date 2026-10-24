@@ -19,3 +19,67 @@ Reference tutorial that inspired the scope: https://austinmorlan.com/posts/chip8
 | Keypad | 16 keys | `0`-`F` |
 | Display | 64x32 monochrome | XOR-drawn sprites |
 
+
+## Requirements
+
+- CMake 3.16+
+- A C++17 compiler (MSVC, GCC or Clang)
+- SDL2 (installed with [vcpkg](https://github.com/microsoft/vcpkg): `vcpkg install sdl2:x64-windows`)
+
+## Building
+
+The core library has no SDL dependency; only the `chip8` executable links against SDL2. Point CMake at the vcpkg toolchain file when configuring:
+
+```powershell
+cmake -S . -B build -DCMAKE_TOOLCHAIN_FILE="$env:VCPKG_ROOT/scripts/buildsystems/vcpkg.cmake"
+cmake --build build --config Release
+```
+
+On Linux/macOS, install SDL2 with your package manager and omit the toolchain flag. The executable is written to `build/Release/chip8.exe` (Visual Studio generators) or `build/chip8` (single-config generators).
+
+If Windows reports that `SDL2.dll` is missing, copy it from `<vcpkg>/installed/x64-windows/bin/` next to the executable.
+
+## Usage
+
+```powershell
+.\build\Release\chip8.exe <rom> [--scale N] [--ips N] [quirk flags]
+```
+
+| Option | Default | Description |
+|---|---|---|
+| `--scale N` | 12 | Window pixels per CHIP-8 pixel |
+| `--ips N` | 700 | Instructions per second (minimum 60) |
+| `--shift-vy` | off | `8XY6`/`8XYE` shift `VY` instead of `VX` |
+| `--inc-i` | off | `FX55`/`FX65` increment `I` |
+| `--reset-vf` | off | `8XY1`/`8XY2`/`8XY3` reset `VF` |
+| `--jump-vx` | off | `BNNN` jumps to `NNN + VX` instead of `NNN + V0` |
+
+Example:
+
+```powershell
+.\build\Release\chip8.exe roms\space-invaders\Space-Invaders.ch8 --scale 12 --ips 700
+```
+
+Press **Esc** to quit. If a ROM misbehaves, try different quirk flags or a different `--ips`.
+
+## Controls
+
+The hex keypad is mapped to the left side of a QWERTY keyboard:
+
+```
+CHIP-8 keypad      Keyboard
+ 1 2 3 C            1 2 3 4
+ 4 5 6 D            Q W E R
+ 7 8 9 E            A S D F
+ A 0 B F            Z X C V
+```
+
+For Space Invaders: **W** starts the game and fires, **Q** moves left, **E** moves right.
+
+## Testing
+
+Run the [chip8-test-rom](roms/chip8-test-rom) `test_opcode.ch8` ROM to check opcode behaviour; each opcode shows `OK` or `NO`:
+
+```powershell
+.\build\Release\chip8.exe roms\chip8-test-rom\test_opcode.ch8
+```
